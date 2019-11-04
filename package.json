@@ -1,8 +1,11 @@
 {
-“name”: “LoreBot”,
-“version”: “0.0.1”,
-“description”: “Repository of commonly-known lore for the world of Molidius.”,
-“main”: “bot.js”,
-“author”: “Michael Widler”,
-“dependencies”: {}
+  "name":"LoreBot",
+  "version":"0.0.1",
+  "description":"Repository of commonly-known lore for the world of Molidius.",
+  "main":"bot.js",
+  "author":"Michael Widler",
+  "dependencies":{
+    "discord.io":"https://github.com/woor/discord.io/tarball/gateway_v6",
+    "winston":"^3.2.1"
+  }
 }
