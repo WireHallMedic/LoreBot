@@ -1,0 +1,8 @@
+{
+“name”: “LoreBot”,
+“version”: “0.0.1”,
+“description”: “Repository of commonly-known lore for the world of Molidius.”,
+“main”: “bot.js”,
+“author”: “Michael Widler”,
+“dependencies”: {}
+}
