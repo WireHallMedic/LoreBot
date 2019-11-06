@@ -263,7 +263,7 @@
 "alignment":"Varies",
 "caste":"Regional Deities",
 "symbol":"Varies",
-"description":"Many cultures spread throughout the world worship ideals embodied by the animals around them; sometimes these are aspects of Felja, and sometimes these are not.  Many savage cultures actively try to emulate the animal spirits they worship."
+"description":"Several cultures throughout Molidius worship the spirits of their ancestors, usually (but not always) in addition to the gods.  Often, the belief is that the ancestors of the tribe, clan, village, etc., will take more interest in the needs of their followers. "
 },
 "animal spirits":{
 "name":"Animal Spirits",
@@ -271,7 +271,7 @@
 "alignment":"Varies",
 "caste":"Regional Deities",
 "symbol":"Varies",
-"description":"Several cultures throughout Molidius worship the spirits of their ancestors, usually (but not always) in addition to the gods.  Often, the belief is that the ancestors of the tribe, clan, village, etc., will take more interest in the needs of their followers. "
+"description":"Many cultures spread throughout the world worship ideals embodied by the animals around them; sometimes these are aspects of Felja, and sometimes these are not.  Many savage cultures actively try to emulate the animal spirits they worship."
 },
 "po'mua":{
 "name":"Po'mua",
