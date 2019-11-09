@@ -3,19 +3,22 @@ var logger = require('winston');
 var auth = require('./auth.json');
 var timeInfo = require('./time.json');
 var deities = require('./deities.json');
+var geography = require('./geography.json');
 var poopString = "Heh heh. You said 'poop.'";
 var doomString = "DOOMED!";
 var oddsString = "Never tell me the odds!";
 var helpInfo = "Hi, I'm LoreBot! I can provide information on the following things:" +
 			   "\n!Deities - List of deities." +
 			   "\n![DEITY NAME] - Specific deity information." +
+			   "\n!Geography - List of geographic locations." +
+			   "\n![GEOGRAPHIC LOCATION] - Specific geographic information." +
 			   "\n!Lunar [SEASON] [DAY] [YEAR] - Lunar phases for that day." +
 			   "\n!Hakim - Description of Hakim and Hakim's New and Previously Owned Magical Items." +
 			   "\n!Hakim Prices - Prices for Hakim's." +
 			   "\n!Time - Calendar and timekeeping." + 
+			   "\n!Standards - The foundation of currency." + 
 			   "\n!Tavern - Randomly generated tavern name." + 
-			   "\n!Interlude - Randomly selected interlude." + 
-			   "\nCurrently being added: Geography!";
+			   "\n!Interlude - Randomly selected interlude.";
 var adjList = ["Stout", "Bloody", "Slow", "Dull", "Soaked", "Drunken", "Crooked", "Dark", "Fabulous", "Noble", "Soft", "Red", 
 			   "Green", "White", "Black", "Yellow", "Blue", "Burning", "Shattered", "Mighty", "Strong", "Lonely", "Poor", "Old", 
 			   "Generous", "Lanky", "Hapless", "Tall", "Remarkable", "Frugal", "Prudent", "Foul", "Evil", "Good", "Rotten", "Shining", 
@@ -56,7 +59,14 @@ var hakimDesc = "  Halkim Al-Nabi is known throughout Molidius as a fair and hon
 				"is there.  In effect, everyone gets their own instance of Hakim’s.\n  Hakim does not offer anything other than the " +
 				"products and services listed below.  He is polite, but firm.  He does not deal in information or transportation, nor " +
 				"does he  negotiate or haggle. He does not carry items made of nonmagical special substances, such as mithril or dragonhide.";
-
+var standardsString = "  Commissioned by the ancient dwarven king Thakrond Flintbeard during the great Dwarven Empire, Standard Weights " +
+					  "and Measurements of Precious Metals and Stones (usually just called 'Standards') is the most widely distributed " +
+					  "book in Thelian by a large margin. Standards is an exhaustive guide to valuating metals and gem stones by weight, " +
+					  "size, purity, and so on and so on, and is the basis of currency for thousands of years.\n  Standards is entirely " +
+					  "self-referential, relating values in relation to silver, and when accompanied by a balance and small weights set, " +
+					  "allows merchants to confidently accept coins and gems as currency. Nearly any merchant had to transcribe their own " +
+					  "copy in their apprenticeship, and copies can be widely purchased for 1 GP. Any player character with a mercantile " +
+					  "background may have a copy of Standards, a balance, and weights in addition to their normal starting gear.";
 // Configure logger settings
 logger.remove(logger.transports.Console);
 logger.add(new logger.transports.Console, {
@@ -92,13 +102,17 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		else if(cmd === "deities") {
 			msg = "```List of Deities:\n" + deities[cmd] + "```";
 		}
+		// list of geography locations
+		else if(cmd === "geography") {
+			msg = "```Geography Topics:\n" + geography[cmd] + "```";
+		}
+		// Standard Weights and Measurements of Precious Stones and Metals
+		else if(cmd === "standards") {
+			msg = "```" + standardsString + "```";
+		}
 		// phase of the moon
 		else if(cmd.startsWith("lunar")) {
 			msg = calcLunar(cmd.substring(6, cmd.length));
-		}
-		// specific deities
-		else if(cmd in deities != 0) {
-			msg = formatDeity(deities[cmd]);
 		}
 		// tavern name
 		else if(cmd === "tavern") {
@@ -116,9 +130,23 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		else if(cmd === "hakim prices") {
 			msg = "```" + hakimPrices + "```";
 		}
+		// specific deities
+		else if(cmd in deities != 0) {
+			msg = formatDeity(deities[cmd]);
+		}
 		// test function
 		else if(cmd === "test") {
 			msg = "Should you really be messing with things you don't understand, " + user + "?";
+		}
+		// specific geographic locations
+		else {
+			var cmd2 = cmd;
+			if(cmd2.startsWith("the ")) {
+				cmd2 = cmd2.substring(4);
+			}
+			if(cmd2 in geography != 0) {
+				msg = formatGeography(geography[cmd2]);
+			}
 		}
      }
 	 // chirp, ignores own comments
@@ -150,6 +178,14 @@ function formatDeity(deity) {
 	str += "Alignment: " + deity.alignment + "\n";
 	str += "Symbol: " + deity.symbol + "\n";
 	str += "Description and Tenets: " + deity.description + "```";
+	return str;
+	
+};
+
+function formatGeography(geo) {
+	var str = "```" + geo.name + ":\n";
+	str += "Primary Language: " + geo.language + "\n";
+	str += geo.description + "```";
 	return str;
 	
 };

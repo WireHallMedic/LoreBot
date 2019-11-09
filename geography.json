@@ -1,316 +1,144 @@
 {
-"deities":"The Old Gods: Audra, Chylae, Emezes, Felja, Fetchi, Lergor, Mezal, Nox, Onusar, Reka, Sol\n\nThe Young Gods: Adaris, Alacas, Courocas, Epia, Frovan, Geos, Gericas, Iriz, Kitsan, Laex, Meral, Rarekor, Tusain, Zelia, Zyar\n\nThe Hero Gods: Alcott, Daiuz Hammerstrike, Kandala, Tranton, Tulai, Xenos\n\nRegional Gods: Ancestor Spirits, Animal Spirits, Po'mua, The Jade Emperor, The Prophet, Vorardruak\n\nDead Gods: Dracos",
+"geography":"The World: Molidius\nContinents: Arkarsa, Erathal-Shar, Ghalak, Thelian\nRegions: Al-Badia, Asdoli Mountains, Athinar, The Chang River, Chill Peak, The Deeprealms, Doriala, Dragonjaw Mountains, Ecoll Highlands, Forestlands, Great Ravine, Hundred Kingdoms, Ibori Coast, Ireby, Jalanis River, Lakehills, Molidius, Poa Steppes, Salino Marshes, Sentinel Peaks, Silt Sea, Underhighway, Valis, Vesgalth",
 
-"audra":{
-"name":"Audra",
-"portfolio":"Art, Travelers",
-"alignment":"Neutral",
-"caste":"Old Goddess",
-"symbol":"A harp on a road",
-"description":"The Patroness, as she is known, is the goddess of artists and performers, as well as travelers.  Known as kind and protective, she is very popular among bards and nobles.  Creator of the halflings.\n - Cultivate beauty in all aspects.\n - Always seek new horizons, be it in art or travel.\n - Show kindness to the weary."
+"thelian":{
+"name":"Thelian",
+"language":"Various",
+"description":"Thelian is one of the major continents of Molidius, by far the most densely populated. It is broadly divided into the Hundred Kingdoms, Vesgalth, Doriala, Al Badia, the Poa Steppes, the Ecoll Highlands, the Sentinel Peaks, Ireby, and the Asdoli Mountains."
 },
-"chylae":{
-"name":"Chylae",
-"portfolio":"Nature, Plants, Wilderness",
-"alignment":"Neutral",
-"caste":"Old Goddess",
-"symbol":"An oak leaf",
-"description":"Nature or Mother Nature, Chylae is the goddess of rangers, druids, and the co-creator of the elves (with Emezes).  She protects the wilderness and her children (both the fey and plants), as well as the children of her sister Felja.\n - Protect the wild places of the world from destruction and overuse.\n - Fear not the savagery of nature; seek the harmony within it.\n - Destroy undead and aberrations at all opportunities."
+"hundred kingdoms":{
+"name":"The Hundred Kingdoms",
+"language":"Centennian",
+"description":"Bordered by the Sea of Storms to the west, and mountains on all other sides with the Glass Sea and Temperate Ocean in the northeast and southeast, this region of Thelian is composed of about several dozen small kingdoms and countless petty empires. For much of recorded history, it was a chaotic land, littered with small nations perpetually at war with each other. The moniker 'The Hundred Kingdoms' was used for convenience, as nations appeared and disappeared frequently. The Hundred Kingdoms are very diverse, an while less politically volatile following Brk'ka's Invasion, it would be naive to call it stable."
 },
-"emezes":{
-"name":"Emezes",
-"portfolio":"Wisdom, Strategy",
-"alignment":"Lawful Good",
-"caste":"Old God",
-"symbol":"An open book",
-"description":"The Loremaster, the Allknowing One, Emezes is most often revered by sages and arcane spellcasters.  While his brother Iriz specializes in knowledge for knowledge's sake, Emezes focuses on the application of information.  Co-creator of the elves, with Chylae.\n - Seek self-perfection through knowledge and discipline.\n - Accumulate, preserve and distribute knowledge in all forms.\n - Tear down the works of Nox and her followers."
+"great ravine":{
+"name":"The Great Ravine",
+"language":"Dwarven",
+"description":"The Great Ravine is a vast, natural gorge carved by the Jalanis River as it winds its way south from the Glass Sea.  Largely populated by dwarves, gnomes, and halflings, the Great Ravine is known to hold many entrances to the Deeprealms, which must be constantly monitored.  Additionally, several settlements surround the ravine, forming a support network for the guards and craftsmen of the area. The reigning monarch of Kar-Ulgar is recognized as the highest authority in the region, as the dwarven forces which patrol the area are the only organized defense available. The dwarves don't mind the burden of defending the nearby communities, as they in turn depend on the surface dwellers for trade."
 },
-"felja":{
-"name":"Felja",
-"portfolio":"Animals, Hunters",
-"alignment":"Neutral",
-"caste":"Old Goddess",
-"symbol":"An arrow in front of a fang",
-"description":"The Beastmistress and the Huntress, Felja is revered by hunters, trackers, and any who depend on animals for survival.  Elves also make up a large portion of her faithful.  She is an unrelenting hunter, but angered by needless suffering.  Creator of the animals.\n - Taking the life of another is a holy act, to be undertaken only with reverence, respect, and necessity.\n - Depend only upon own skills and abilities.\n - Hunt those who kill for pleasure."
+"dragonjaw mountains":{
+"name":"The Dragonjaw Mountains",
+"language":"Centennian",
+"description":"A great range of jagged peaks which splits the sky, the Dragonjaw Mountains run along the coast of the Glass Sea, continuing down into the Hundred Kingdoms. They isolate the Ibori Coast, and while not as impassable as the Asdoli Mountains, are home to many dangerous creatures. A few, isolated communities dot the imposing peaks of the Dragonjaw Mountains. Those hardy places of civilization which can persevere here must constantly be vigilant against ogres, giants, and gargoyles, and tend to have sturdy watchtowers at their edges. Many of the giants from Brk'ka's Invasion fled here at the war's conclusion, forming their own communities. Roving bands of hill giants are a constant threat."
 },
-"fetchi":{
-"name":"Fetchi",
-"portfolio":"Evil, Tyranny",
-"alignment":"Neutral Evil",
-"caste":"Old Goddess",
-"symbol":"Red lightning bolt",
-"description":"The Corruptor was once the lover of Onusar, and her true feelings about him are unknown.  Together the two of them created the world; their priests generally try to avoid confrontations with each other in deference to their past, which is impossible.  Fetchi herself is moody and fickle.  Creator of demons and devils.\n - Hoard power, for it is its own reward.\n - Leave no slight unpunished and forgive no wrong.\n - The truest mark of power is the ability to inflict misery upon others."
+"chill peak":{
+"name":"Chill Peak",
+"language":"Centennian",
+"description":"A single, huge mountain that shoots up two miles above the surrounding desert, Chill Peak was the headquarters for the resistance to, and counterattack on, Brk'Ka's Invasion. With the predominantly cloud giant community of Highhold perched upon it, Chill Peak is tall enough to rise above the anti-magic field that binds Athinar. In the aftermath of the Invasion, Highhold has become home to many powerful heroes, many of whom can be occasionally persuaded to take up arms again, if the cause is right."
 },
-"lergor":{
-"name":"Lergor",
-"portfolio":"Law, Duty, Rulership",
-"alignment":"Lawful Neutral",
-"caste":"Old God",
-"symbol":"Open eye on a hammer",
-"description":"The Guardian is stern, noble, and reliable, qualities which endear him to dwarves immensely.  The creator of the dwarves, he is also the father of Frovan and Meral.\n - Swear no oath you cannot uphold, and uphold each oath you swear.\n - Be stoic and tenacious in the face of adversity.\n - Pursue and punish oath-breakers, liars, and traitors; particularly the minions of Tulai."
+"athinar":{
+"name":"Athinar",
+"language":"Centennian",
+"description":"  The blighted region known as Athinar lies in the center of the Hundred Kingdoms, a perfectly square desert one hundred miles per side. At each corner, a massive black iron tower rises above the surrounding lands, clearly marking the border.\n  Until quite recently, Athinar was a perfectly ordinary part of the Hundred Kingdoms, as verdant as any other, but was forever changed by Brk'ka's Invasion. To fuel his arcane ambitions, all the metal was stripped from the region to create the towers, and fell sorcereries block the use of magic within their perimeter. Even the gods are blinded to what transpires in Athinar, and by some dire invocation nearly all vegetation withered and died within the year.\n  Few people have chosen to remain in Athinar; those that do almost without exception have reason to fear magic, or even the gods themselves."
 },
-"meral":{
-"name":"Mezal",
-"portfolio":"Chaos, The Elements, Weather",
-"alignment":"Chaotic Neutral",
-"caste":"Old God",
-"symbol":"Storm cloud over a fissure",
-"description":"Mezal the Capricious is the lord and master of the elements.  He is an uncaring god who will smite his followers and his enemies with equal force.  Mezal is mostly worshiped out of fear.  Creator of the elementals.\n - Mezal cares not for his followers; as such, he has no tenants."
+"forestlands":{
+"name":"The Forestlands",
+"language":"Centennian",
+"description":"  Running the length of the Sentinel Peaks all the way to the Sea of Storms, the Forestlands form the southernmost portion of the Hundred Kingdoms. The Forestlands are characterized by their dense, dangerous woods, criss-crossed by lonely roads linking settlements. Forestlanders tend to have an independent streak, and what nations can be found here tend to be much smaller than those further north. Most of the beastmen stranded by Brk'ka's defeat took up residence here, and while they face significant prejudice, some tribes have managed to become accepted by more civilized races.\n  Of particular note is the area near the ruins of Dravan Nithe, the ancient elven capital. Now demon-infested wreckage, Dravan Nithe is avoided by most sane people, though rumors of ancient treasures from the time of the Great War still draw foolhardy adventurers."
 },
-"nox":{
-"name":"Nox",
-"portfolio":"Darkness, Secrets",
-"alignment":"Chaotic Evil",
-"caste":"Old Goddess",
-"symbol":"A crescent",
-"description":"Nox the Nightmistress rules the darkness.  When the elven race was cursed by Dracos, she claimed those who were driven underground and altered them into the race that they are today.  Those with business not to be done under the watchful eye of Sol often find themselves aligned with Nox.  The daggers kept by her clergy are generally poisoned.  Creator of the orcs, goblins, and gnolls.\n - Cloak yourself with shadows; they are the sacred places of the Nightmistress and shall protect you.\n - Never reveal all you know.\n - Nurture the darkness in your heart; exploit it in the hearts of others."
+"valis":{
+"name":"Valis",
+"language":"Centennian",
+"description":"The city-state of Valis is the longest continuous nation in the Hundred Kingdoms. A stable republic on a peninsula protruding into the Sea of Storms, Valis has been able to resist the armies of its neighbors and has maintained a continuous government for three hundred years. It is a travel hub for adventurers, and the government actively works to encourage this; being the home base for so many professional sell-swords is key to maintaining its independence."
 },
-"onusar":{
-"name":"Onusar",
-"portfolio":"Good",
-"alignment":"Neutral Good",
-"caste":"Old God",
-"symbol":"Two wavy lines in front of a triangle",
-"description":"The Pure One, Onusar is the once-lover of Fetchi.  Together the two of them created the world, and it is rumored that he still has a soft spot for her, despite their differences.  Aloof and stern, he is the father or grandfather of all the other gods, save Fetchi.  Creator of the angels and celestials. \n - Uphold the highest ideals of honor and righteousness.\n - Be constantly vigilant against evil, and oppose it wherever it is found.\n - Perpetrate no evil, neither by action nor inaction."
+"lakehills":{
+"name":"The Lakehills",
+"language":"Centennian",
+"description":"  A picturesque land of rolling hills and sparkling waters, the Lakehills lie to the south of the Great Ravine, fed by an abundance of springs which form tributaries to the Jalanis River. The population has a disproportionate number of halflings and gnomes, who use the winding waterways as avenues for trade. The difficulty of marching an army through this region, as well as a disinterest in goings on in neighboring regions, has limited its appeal to would-be conquerors.\n  In particular, the Lakehills are noted for their vineyards, musicians, and shipwrights."
 },
-"reka":{
-"name":"Reka",
-"portfolio":"Fate",
-"alignment":"Lawful Neutral",
-"caste":"Old Goddess",
-"symbol":"A roll of thread on a stick",
-"description":"While her daughter Zelia is the goddess of luck, the Weaver is the goddess of inescapable destiny.  Her priests are somber, taking a larger view of even the most trivial events.  Creator of the humans.\n - Strive to see the Grand Tapestry in all things.\n - Aid those touched by Reka to find their destiny.\n - Oppose the followers of Mezal and Adaris, who's actions disrupt the Grand Tapestry."
+"sentinel peaks":{
+"name":"Sentinel Peaks",
+"language":"Centennian, Vesgi",
+"description":"  Running from the Sea of Storms to the Temperate Ocean, the Sentinel Peaks derive their name from their role in separating the rest of the continent from the lands to their south; the cursed realm of Vesgalth.\n  Even before Tranton's ascension, the Sentinel Peaks were dotted with monasteries, temples, and forts to keep his minions at bay. Only the harsh terrain and constant vigilance keep the undead scourge within their own borders, and every citizen of the Sentinel Peaks is expected to be willing to give their life to keep it that way. There were few settlements here before the coming of Tranton, and now nearly all such places are the home of orders of paladins, militant clerics, and monks."
 },
-"sol":{
-"name":"Sol",
-"portfolio":"Light, generosity",
-"alignment":"Neutral Good",
-"caste":"Old God",
-"symbol":"A sunrise",
-"description":"Sol, the Morninglord and the Giver, is the master of the sun and all light.  Commonly worshipped, he benevolently bestow his gifts upon all he sees.  His priests are expected to emulate this generosity, and frequently act as advocates and philanthropists in the communities in which they live.  Creator of the giants.\n - Build communities and fellowships, so that each may rely on his neighbor.\n - Share freely with those in need.\n - Oppose Nox and Tulai, as their lies destroy brotherhood."
+"jalanis river":{
+"name":"The Jalanis River",
+"language":"Centennian",
+"description":"  Winding from Lake Jalanis near the northern end of the Hundred Kingdoms to its distribution in the Salino Marshes, the mighty Jalanis River is the main waterway through the Hundred Kingdoms. Wide and deep in most places, it is a vital artery for trade and transport."
 },
-"adaris":{
-"name":"Adaris",
-"portfolio":"Rage, Aggression, Destruction",
-"alignment":"Chaotic Evil",
-"caste":"Young God",
-"symbol":"A red starburst",
-"description":"The child of Felja and Courocas, Adaris is by far the youngest of the true gods, having been born in the middle of the fifty-second age.  Adaris revels in all forms of  destruction, and exhorts his followers to do the same.\n - Revel in destruction, chaos, and your own emotions.\n - Teach those who would build and scheme the futility of their actions.\n - Their is neither past nor future; there is only now."
+"salino marshes":{
+"name":"The Salino Marshes",
+"language":"Centennian",
+"description":"Lying just north of the Forestlands along the coast of the Sea of Storms, the Salino Marshes are a vast network of brackish fens and swamps. With few settlements, its semi-aquatic nature makes it inhospitable for most races, though the triton city of Corilya dwells here, a remnant from when the tritons were allies of the Empire of Voltrey. Bands of trolls, bullywugs, and lizardfolk are a constant threat to travelers in the region, to say nothing of the terrors of the deep who occasionally find their way in from the ocean."
 },
-"alacas":{
-"name":"Alacas",
-"portfolio":"Death (Disease), Plague, Decay",
-"alignment":"Neutral Evil",
-"caste":"Young God",
-"symbol":"A green disk",
-"description":"The Sickly One, Alacas is the bringer of plagues and poxes.  He is most often prayed to out of fear or desperation.  Brother to Coruocas and Gericas.\n - Decay is in all things; find it and nurture it.\n - Spread the blessings of Alacas, that he may outdo his brothers.\n - Be patient in your tasks; Alacas rewards those who are thorough."
+"doriala":{
+"name":"Doriala",
+"language":"Dorialan",
+"description":"  The largest single region in Thelian, Doriala's borders extend for many thousands of miles, along the coast of the Quenching Sea to the east, the Daggerstone Mountains which separate it from Ireby to the north, before meeting the Sea of Glass to the northwest and finally the Asdoli Mountains to the west and south.\n  Doriala is (in)famous as the most rigidly controlled society of Thelian; an iron-clad caste system, incredibly complex bureaucracy, and utter intolerance of lawbreakers typify Dorialan policy.  Weapons are outlawed except for members of the noble and military castes, and magic is strictly forbidden to all but clergy and nobility.  Rebels are dealt with swiftly and mercilessly.  To defend themselves, the underground radicals have become proficient with improvised weapons such as the staff, nunchaku and sai, as well as developing martial arts in secret.  Indeed, most of the martial arts temples and academies of the world began behind closed doors in Doriala.\n  The majority of the populace of Doriala are farmers, herdsmen, and simple craftsmen.  Meeting a heavy tax burden limits their free time, and most entertainers and artists have precious little time to devote to their crafts.  The nobility, however, lives in luxury; every noble is expected to master some art form.\n  Doriala is ruled by the Jade Emperor, a hereditary title which has continued in an unbroken line for eighteen generations; the position has been held by one line of nobility or another for twelve ages.  The Jade Emperor is both sovereign ruler and high priest; he is considered the representative of the gods and their most favored mortal."
 },
-"courocas":{
-"name":"Courocas",
-"portfolio":"Death (Violence), Murder, Battle",
-"alignment":"Chaotic Evil",
-"caste":"Young God",
-"symbol":"Skull bleeding from eyes, nose, and mouth",
-"description":"The Raging One, Courocas can be found sweeping up warriors fallen in battle and murdered in back alleys.  Sometimes called the Murderer's God, his interest in mortals begins where Geos and Zyar's ends.\n - Kill in the name of Courocas, that he may outdo his brothers.\n - Incite the foolish servants of Geos and Zyar to war.\n - Treat the servants of Adaris as brothers."
+"poa steppes":{
+"name":"Poa Steppes",
+"language":"Dorialan",
+"description":"  The great grassy planes to the north of Doriala are home to the greatest horsepeople of Molidius; the fiercely territorial Hung of the Poa Steppes. Despite the hunger for conquest of their southern neighbors, the Hung have maintained their independent ways as pastoral nomads. The disparate tribes have united under a single Warlord whenever needed; evading conventional armies and performing guerrilla raids on supply lines, presenting no enemy for their aggressors to attack.\n  As for the Hung themselves, they are a simple people, with a rich oral tradition. They herd grazing animals, and forage for plants, while supplementing their diet by hunting and fishing. Domestic skills are highly valued, and even the fiercest warrior is expected to be an expert at weaving, cooking, sewing, or some other similar skill."
 },
-"epia":{
-"name":"Epia",
-"portfolio":"Love",
-"alignment":"Chaotic Good",
-"caste":"Young Goddess",
-"symbol":"Two interlocking rings",
-"description":"The Soulbinder, the Matchmistress is always popular among younger generations.  Her priests frequently help young couples, eloping them in secret and the like.  Often, her priests act as matchmakers of the community.   Other common duties of her priests include those of midwives, doctors, and other healers.\n - Love all things.\n - Love is both a means and an end; aid it wherever possible.\n - Be as love; selfless, kind, soothing and relentless."
+"chang river":{
+"name":"The Chang River",
+"language":"Dorialan",
+"description":"Fed by the Jade Sea, the Chang River winds through the provinces of Doriala, replenishing their soil in the annual monsoon. It is said that human life began in the Chang River Valley, which is among the most fertile in the world, and which still produces crops distributed the length and breadth of Doriala. An extremely active waterway, uncountable boats sail its waters, and there are even entire nomadic communities of houseboats that live their whole lives calling the Chang River home, herding waterfowl and fishing."
 },
-"frovan":{
-"name":"Frovan",
-"portfolio":"Justice",
-"alignment":"Lawful Neutral",
-"caste":"Young God",
-"symbol":"A golden balance",
-"description":"The Balanced One is one of the most widely accepted gods, with a large following, especially among dwarves.  Frovan has a surprisingly good relationship with his brother Meral, and their followers generally extend tolerance and acceptance towards each other.  A stern but practical god, Frovan often travels to the Plane of Judgment (Purgatory) to ensure that the dead are judged fairly.\n - Repay good with good, and evil with righteous retribution.\n - Obey the law and respect traditions.\n - Treat the followers of Mezal as favored cousins."
+"asdoli mountains":{
+"name":"The Asdoli Mountans",
+"language":"Dorialan",
+"description":"  A mighty range of mountains splits the continent of Thelian in half before turning east; indeed these are the greatest mountains in the world. They separate the regions of the Ecoll Highlands to the west from the great deserts of Al-Badia in the southeast, and Doraila in the northeast. Many generations ago a group of monks, fleeing persecution in Doriala, took refuge in the great peaks of Asdoli, correctly believing themselves safe in the steep impasses. Now, a society exists in the crests of the world; massive monasteries carved from the rock, great libraries and mighty halls. The monks pass their days in pursuit of self-perfection, in study, in exercise, and farming on terraces created for that purpose.\n  The mountains themselves are incredibly inhospitable to both travelers and those who dwell in them; steep, craggy and rocky, with violent weather, there are no known passes capable of letting anything larger than a wheelbarrow through most of the region, much less a wagon. With a knowledgeable guide, it is possible (though difficult in the extreme, and highly dangerous) to get a horse through. Mules, however, are a relatively common sight in the few passes and trails that do exist (though the monks do not use animals for labor)."
 },
-"geos":{
-"name":"Geos",
-"portfolio":"War, Valor",
-"alignment":"Chaotic Good",
-"caste":"Young God",
-"symbol":"Silver gauntleted fist",
-"description":"The Valorous One, the Knight, the Soldier, Geos is one of the most popular deities with a huge following of warriors of all types.  Constantly warring with his brother Zyar, Geos embodies the virtues of honor, courage and valor.  He is a boisterous and good-natured god.\n - Embody the qualities of loyalty, honor, truth, and strength.\n - Be fearless and relentless in the persecution of the wicked.\n - Combat the minions of Zyar at all opportunities."
+"underhighway":{
+"name":"The Underhighway",
+"language":"Dwarven",
+"description":"While the Asdoli Mountains are largely impassable for larger wagons, there is one way; the Underhighway. A great underground passage which connects the Ecoll Highlands and the Hundred Kingdoms, Al-Badia, and Doriala, the Underhighway is one of the great marvels of the great Dwarven Empire of ages past. Beautiful intricate statues mark its length, and some of the oldest communities of dwarves still exist to aid travelers. While the Underhighway is a safe and serene way to cross below the Asdoli Mountains, it is not a cheap one; the dwarves maintain a stiff toll for its use. However, for merchants with the means, the cost is well worth it."
 },
-"gericas":{
-"name":"Gericas",
-"portfolio":"Death (Age), Time",
-"alignment":"Lawful Netural",
-"caste":"Young God",
-"symbol":"An hourglass",
-"description":"The Ancient One, Gericas collects the souls of those who die from old age.  Prayers to him are commonly pleas to be taken away either now (by the suffering), or eventually.  Brother to Courocas and Alacas, he is utterly emotionless.\n - Do not fear death, for death is the natural state which follows life.\n - Give comfort to the bereaved.\n - Destroy undead and those who create them."
+"al-badia":{
+"name":"Al-Badia",
+"language":"Badis",
+"description":"  The great deserts of Al-Badia fill the central southeastern part of Thelian, and are home to the Al-Badian people. Divided into two distinct groups, the people of Al-Badia are characterized by their shrewd business dealings, adherence to etiquette, and quality craftsmen.\n  The first group call themselves Dorduni, or 'enlightened ones', and dwell in great cities built around the few large oases, along the coast, and around the Silt Sea, the one inland body of water in the region. The laws of the Dorduni are notoriously strict, with a rigid caste system and complex government. The Grand High Caliph (king) rules over the caliphs (lords), who rule over the pashas (hereditary mayors), who rule over the individual cities. Larger cities may have several districts, each controlled by a separate pasha.\n  The other group are called the Badii, or 'desert people.' They live in nomadic tribes, of various morality, and are renowned for their horsemanship and powerful elemental sorcerers. The Badii exist by moving from oasis to oasis, and many raid the merchant caravans which move through the deserts. They exist in a constant state of unease with the Dorduni, who view them as filthy violent savages. A Badii's tribe and rank within that tribe can be easily determined by their facial tattoos; each tribe uses its own unique tattoos to mark its members. These markings are made more elaborate as a member grows in stature.\n  The land of Al-Badia is predominantly desert; some rocky, sandy or baked earth. A number of oases of varying size dot the landscape, and two mountain ranges pierce the region. The Silt Sea, a sandy, salty ocean lies in the south-western area of Al-Badia."
 },
-"iriz":{
-"name":"Iriz",
-"portfolio":"Magic",
-"alignment":"Neutral Good",
-"caste":"Young God",
-"symbol":"A hand with a glowing index finger extended",
-"description":"Iriz the Trickster, Iriz the Mage, Iriz is the patron god of spellcasters.  He also has a bit of a reputation as a prankster and riddler, making him quite popular with gnomes and halflings.  The prank which gave him the most glee was the creation of the gnomish race, which he accomplished by altering a clan of dwarves.  Lergor still has yet to see the humor of it.\n - Encourage innovation and new thoughts, wherever they may lead.\n - Collect and preserve knowledge.\n - Find and spread joy and humor wherever you can."
+"silt sea":{
+"name":"The Silt Sea",
+"language":"Badis",
+"description":"The Silt Sea is a great opaque, brownish-yellow body of water inside Al-Badia. Due to extremely high amounts of salt, few aquatic creatures live in its waters. However, it is a major path for many trade routes, and sailors ply its low waves in flat-bottomed boats, in deference to its many shallows. A large amount of the surrounding regions' water comes from the Silt Sea, purified by distillery and sent out in caravan."
 },
-"kitsan":{
-"name":"Kitsan",
-"portfolio":"Life, Agriculture",
-"alignment":"Neutral Good",
-"caste":"Young Goddess",
-"symbol":"A sprouting plant",
-"description":"The Earthmother is another of the more widely revered deities, primarily with farmers.  She is gentle, though occasionally uncaring.  A simple god, she encourages her followers to emulate her peaceful nature.\n - Preserve the cycle of growth and harvest.\n - Live on and with the land.\n - Be generous in sharing the land's bounty."
+"vesgalth":{
+"name":"Vesgalth",
+"language":"Vesgi",
+"description":"  A blighted and cursed realm, Vesgalth is avoided by all sane travelers if at all possible. Its people live in a perpetual state of abject terror, and all strangers are greeted with open hostility distrust. Once a beautiful and prosperous realm, it has been forever corrupted by the touch of the ascended god Tranton.\n  While mortal, Tranton lived in the land of Vesgalth; during his life and unlife, he gradually eroded the kingdom by through fear and murder. Using powerful magics, he infiltrated the nobility by slaying its members and returning them as vampires under his control. His unlife as a lich allowed him the patience to infiltrate all aspects of government, commerce, and the military over the course of several generations. Soon, he raised a mighty army of the dead and swiftly conquered all that lay before him. The population was forced into miserable living conditions, and made to worship him as a god. It was not long before he actually became one.\n  The people of Vesgalth still live under the oppression of their undead masters, and are still forced to worship Tranton. The only exceptions to this are the roving bands of gypsies, who act outside the control of anyone and seem to be a part of the realm, rather than mere inhabitants.\n  Vesgalth is distinguished by its perpetual cloud cover; it is not an exaggeration to say that the sun does not shine on this accursed place. Deep misty forests, rolling hills and dark, swift rivers characterize the region's topography. It is situated an a peninsula south of the Hundred Kingdoms, below the Grey Mountains."
 },
-"laex":{
-"name":"Laex",
-"portfolio":"Martyrs, Suffering",
-"alignment":"Lawful Good",
-"caste":"Young God",
-"symbol":"Mask crying a drop of blood",
-"description":"Laex the Bleeding, the Crying One; his name is cried out by those in pain and torment.  Laex's tenets call for the taking up of the burdens of others, and he spends most of his time in the lower planes, helping the damned.  He is a sad, but kind god.\n - Shoulder the burdens of others.\n - Show compassion and mercy to all.\n - Do not flinch in the face of danger."
+"ireby":{
+"name":"Ireby",
+"language":"Draconic",
+"description":"Following the Great War, a new civilization rose to dominance; the Empire of Voltrey. Ireby is the last remnant of this fallen empire. A relatively small area to the north of the Daggerstone Mountains, which form its border with Doriala, Ireby is unique in that its government is a mageocracy. Most of the residents of the realm have at least some magical ability, and the Council of Archmages, a body of seventeen advisors, are selected from the most senior wizards in Ireby. It is ruled by the Grand High Archmage, generally acknowledged to be the greatest mage in the world. Its capital, the Enchanted City, is unusual as well; a great bundle of towers, streets and buildings enchanted to float a few feet above the ground.  The entire Enchanted City follows a circuit around the empire of Ireby."
 },
-"meral":{
-"name":"Meral",
-"portfolio":"Vengance",
-"alignment":"Lawful Evil",
-"caste":"Young God",
-"symbol":"A black 'X'",
-"description":"The Patient One, Meral and his followers seek to avenge slights, regardless of nature.  He is the brother of Frovan, and they enjoy a close friendship.  Utterly unforgiving, Meral represents the dark side of Frovan's justice, and the corruption of his father Lergor’s rulership.  His symbol is a black 'X', which is often carved into his priest's victims.\n - Never forget a slight or loss, for those who have hurt you must suffer in kind.\n - The ends justify the means.\n - Treat the followers of Frovan as favored cousins."
+"ibori coast":{
+"name":"The Ibori Coast",
+"language":"Ecollian",
+"description":"Separated from the Hundred Kingdoms by the Dragonjaw Mountians, the north western coast of Thelian is called the Ibori Coast, and is the province of the northmen. Unparalleled sailors and warlike in nature, the northmen launch frequent raids against the nearby seasides, particularly the Hundred Kingdoms and Doriala. The Sea of Glass dips deeply into the lands of the these two realms, making them readily accessible. The Ibori Coast is criss-crossed with many rivers, lakes and fjords; it is said that a northman can swim before he can walk. The Iborians, however, have no written language; their skalds are renowned the world over for their storytelling abilities."
 },
-"rarekor":{
-"name":"Rarekor",
-"portfolio":"Revelry, Festivals",
-"alignment":"Chaotic Neutral",
-"caste":"Young God",
-"symbol":"A foaming mug",
-"description":"Wherever people are having fun in a group, wherever there are games of chance, the Reveler is there.  Often worshipped by bards, Rarekor holds dominion over all entertainers and festive gatherings.\n - Life is to be enjoyed, not merely completed.\n - Let not your revelry intrude on the joy of others.\n - Take loss and pain in stride, for without them their is neither gain nor joy."
+"ecoll highlands":{
+"name":"The Ecoll Highlands",
+"language":"Ecollian",
+"description":"  The area separating the fractious Hundred Kingdoms to the west and the impenetrable Asdoli Mountians to the east is a rugged, hilly region known as the Ecoll Highlands. Farming is difficult in this region, as the soil is rocky and low in nutrients; most of the highlanders survive by herding. A tough, hardy people, the highlanders are suspicious of outsiders and insular by nature. Once a colony of dwarves and humans, most of the dwarves left long ago when they failed to find the ores they sought; however, their mark is still evident on the humans who stayed behind. Tough, resilient, and often stern, the highlanders could easily be mistaken for dwarves in temperament were it not for their senses of humor (somewhat akin to their forefathers, the northmen). The highlands are usually wet; constant rains fill the many lakes and streams. Misty and marshy, with a few forests.\n  The Highlands are bordered on the southern end by the Temperate Ocean, and on the northern end by the Sea of Glass, making them occasional targets of the Ibori."
 },
-"tusain":{
-"name":"Tusain",
-"portfolio":"Competition, Strength",
-"alignment":"Lawful Neutral",
-"caste":"Young God",
-"symbol":"Pair of dice",
-"description":"Often found with his brother Rarekor, the Challenger is he who watches over all forms of competition, including the more physical side.  His priests are usually quite athletic, and enjoy a good game of chance; they are of course very competitive.\n - Only through adversity do we grow stronger.\n - Never turn away from a challenge.\n - Obey the laws, and respect authority."
+"arkarsa":{
+"name":"Arkarsa",
+"language":"None",
+"description":"A bitterly cold and snowbound land, the continent of Arkarsa lies at the South Pole of Molidius. Few creatures live here, and there are no settlements. Vast snowfields lie over treacherous icy caverns, and monolithic glaciers pierce the sky. It is here that Daiuz Hammerstrike bound Vorardruak, the Hunger in the Dark, for which he was elevated to godhood."
 },
-"zelia":{
-"name":"Zelia",
-"portfolio":"Luck",
-"alignment":"Chaotic Neutral",
-"caste":"Young Goddess",
-"symbol":"A coin with a woman's face",
-"description":"Zelia the Luckmaiden or Lady Luck appeals to gamblers, bards, and travelers.  She and her followers are known as easy-going, taking life as it comes, and appreciating both good and bad fortune.\n - Take pleasure in the tides of fortune, both the ebbs and flows.\n - Act with swiftness and conviction; trust to the Luckmaiden to care for the rest.\n - Seek not to oppose the chaos of life, but to harness it."
+"ghalak":{
+"name":"Ghalak",
+"language":"Ghalakar",
+"description":"Several thousand miles west of Thelian is the great continent of Ghalak. Tremendously unstable, Ghalak is wracked by near-constant earthquakes and volcanic tremors. The only permanent settlement is Fort Semptris, woven from the living trees, and serving as a trade hub with Thelian. Ghalak is home to dinosaur-filled jungles, savannahs hunted by primitive tribesmen, and lush rainforests hiding ancient bands of humanoids."
 },
-"zyar":{
-"name":"Zyar",
-"portfolio":"War, Bloodshed",
-"alignment":"Chaotic Evil",
-"caste":"Young God",
-"symbol":"A spiked, gauntleted fist",
-"description":"The brother and immortal enemy of Geos, the Slaughterer is to be found on the front lines of combat, leading the charges of the base and bloodthirsty.  While Geos embodies the glory of valorous combat, Zyar represents the joy of killing.\n - Raid.  Kill.  Conquer.\n - Raise up your host to seize that which you desire.\n - Ownership is the right of the strong."
+"erathal-shar":{
+"name":"Erathal-Shar",
+"language":"Elven",
+"description":"Little is known of the isle of Erathal-Shar, the new homeland of the elves. Following the disastrous conclusion of the Great War, many elves advocated isolation, and in their white ships sailed for the distant shores of their new home. The elves of Erathal-Shar maintain this stance even today, and have no trade nor communication with the outside world. Visitors are not welcome, and ships are turned away, by force if necessary."
 },
-"alcott":{
-"name":"Alcott",
-"portfolio":"Luxury, Comfort",
-"alignment":"Neutral Good",
-"caste":"Hero God",
-"symbol":"A purple pillow",
-"description":"One of the youngest of the gods, the Resting God is an ascended hero.  Once a halfling adventurer, he and his party used the awesome powers of the Seven Swords to become a god.  The fates of all but one of his fellow adventurers are unknown.  Alcott is very popular with the rich, and the would-be rich, and his priests often are asked to bless homes.\n - Seek comfort, luxury and wealth.\n - A happy life is the reward for opportunity and cleverness.\n - Approach all challenges with preparation and forethought."
+"deeprealms":{
+"name":"The Deeprealms",
+"language":"Undercommon",
+"description":"Though the creatures known as purple worms have never been particularly numerous, they have existed since the beginning. The tunnels they burrowed through solid rock were there to shelter the drow, the orcs, and the goblins when Dracos' curse fell upon them. This unimaginably vast network of tunnels and caverns runs below the surface of the world, home to creatures who cannot abide the light. Underground rivers, fungal forests, and even subterranean seas dot its length, as well as the hidden cities of fell races."
 },
-"daiuz hammerstrike":{
-"name":"Daiuz Hammerstrike",
-"portfolio":"Craft, Labor",
-"alignment":"Lawful Good",
-"caste":"Hero God",
-"symbol":"An anvil",
-"description":"The Craftsman is an ascended hero from long ago, and is proud and practical.  Daiuz Hammerstrike is the patron god of blacksmiths, carpenters, masons, and anyone who labors at their craft.  Once a blacksmith of world renown, his craftsmanship eventually attracted the attention of the gods.  Audra sought to humble the master crafter, and challenged him to a competition; each would craft three items, and the other gods would judge which were the best.  The voting was close, but Daiuz was deemed the superior craftsman; his elevation to godhood was his reward.\n - Seek out the riches of the world and forge them into great works of art.\n - Happiness lies in the act of creation.\n - Oppose those who would destroy the works of others."
-},
-"kandala":{
-"name":"Kandala",
-"portfolio":"Madness, Insanity",
-"alignment":"Chaotic Neutral",
-"caste":"Hero Goddess",
-"symbol":"A woman's face, screaming",
-"description":"An ascended hero, Kandala was a human warrior and sorceress in life who fell deeply in love with an elf.  Determined to become immortal so that she could be with him all his long life, her heart and mind were shattered when he was slain by marauding drow and his soul sacrificed to Nox.  She spent the next twenty years below the surface, obliterating every living thing she came across.  Her vengeance accomplished but her sanity still lost, she continued her pursuit of immortality, eventually becoming so powerful she challenged Meral to a fight and bested him.  Though she became a goddess, Meral's revenge was brutal; the he cursed her to relive the moment of her beloved's demise every night.  Few mortals worship Kandala; those that do are often cultists looking to spread her insanity.  Prayers to her are common enough, however; people pray to her to release their loved ones from madness.\n - Spread chaos, destruction, and insanity throughout the world.\n - The world is mad, and seeks your ruin.\n - Slaughter, corrupt and destroy all who stand in your way."
-},
-"tranton":{
-"name":"Tranton",
-"portfolio":"Undeath",
-"alignment":"Lawful Evil",
-"caste":"Hero God",
-"symbol":"A skeletal hand",
-"description":"Once mortal, the Lord of Undeath ruled the region of Vesgalth.  Eventually he amassed enough power to become the god of the undead, worshiped by vampires, liches, ghouls, and other free-willed undead, as well as necromancers.  He still schemes to control all of Molidius.\n - Hold allegiance to none but the Lord of Undeath.\n - Raise armies of the undead and conquer in Tranton's name.\n - Destroy the followers of Sol."
-},
-"tulai":{
-"name":"Tulai",
-"portfolio":"Thievery, Lies",
-"alignment":"Chaotic Evil",
-"caste":"Hero God",
-"symbol":"A black ribbon",
-"description":"An ascended dark elf, the Great Thief or the Filcher is the goddess of thievery, lies, and deception.  Burglars, con-men and muggers all pray to Tulai.  She ascended to godhood after claiming the Ribbon of Felthisan, which the Nox had placed at the bottom of a massive and deadly dungeon to test mortals.\n - Take what you wish; possession is ownership.\n - Spare no pity for the weak; be merciless.\n - Trust is a weakness; exploit that weakness."
-},
-"xenos":{
-"name":"Xenos",
-"portfolio":"Ambition, Achievement",
-"alignment":"Neutral",
-"caste":"Hero God",
-"symbol":"A silver ring in a red burst",
-"description":"The Prince of Ambition is recently ascended to godhood (32, 52a), taking the place of the god Zhardan, who had been imprisoned in a ring for thousands of years.  Xenos frequently joins Geos and Frovan on their crusades, and takes great joy in calling down waves of destruction upon the minions of evil.  He also gets along well with Alcott, his former patron.\n - Seek power, achievement, and knowledge.\n - Ally with others who share your goals.\n - Utterly crush those who oppose you."
-},
-"ancestor spirits":{
-"name":"Ancestor Spirits",
-"portfolio":"Pantheon",
-"alignment":"Varies",
-"caste":"Regional Deities",
-"symbol":"Varies",
-"description":"Several cultures throughout Molidius worship the spirits of their ancestors, usually (but not always) in addition to the gods.  Often, the belief is that the ancestors of the tribe, clan, village, etc., will take more interest in the needs of their followers. "
-},
-"animal spirits":{
-"name":"Animal Spirits",
-"portfolio":"Pantheon",
-"alignment":"Varies",
-"caste":"Regional Deities",
-"symbol":"Varies",
-"description":"Many cultures spread throughout the world worship ideals embodied by the animals around them; sometimes these are aspects of Felja, and sometimes these are not.  Many savage cultures actively try to emulate the animal spirits they worship."
-},
-"po'mua":{
-"name":"Po'mua",
-"portfolio":"Nature, Creation, the Planet (Ghalak)",
-"alignment":"Neutral Good",
-"caste":"Regional Goddess",
-"symbol":"Five concentric circles",
-"description":"Worshipped by the peoples of Western Ghalak, the Earthmother is an amalgam of Felja, Chylae, and Kitsan.  The Great Mother is not merely the patron of Ghalak, she physically is that continent."
-},
-"the jade emperor":{
-"name":"The Jade Emperor",
-"portfolio":"Doriala",
-"alignment":"Lawful Neutral",
-"caste":"Regional God",
-"symbol":"A jade eagle",
-"description":"The Jade Emperor is worshiped throughout Doriala; in fact his worship is required to be included in any religious ceremony (albeit to a lesser extent than the 'Great Gods').  While not truly divine, his worshipper's faith in him grants them the ability to cast spells and work miracles in his name."
-},
-"the prophet":{
-"name":"The Prophet",
-"portfolio":"Law, Justice, Pacifism (Al-Badia)",
-"alignment":"Lawful Neutral",
-"caste":"Regional God",
-"symbol":"None",
-"description":"When he was born in the 34th age, the land that is now Al-Badia was a collection of ruthless bandits and cutthroats who believed in no gods.  The Prophet spent his life spreading the message of pacifism and law; his oratory forged the Dordunii into what they are today.  The Prophet's name has been lost to time, but he is revered as an ascended hero."
-},
-"vorardruak":{
-"name":"Vorardruak",
-"portfolio":"Hunger",
-"alignment":"Chaotic Evil",
-"caste":"Regional Deity",
-"symbol":"A tooth-filled maw",
-"description":"When Lergor placed the first dwarves on Molidius, he placed them in Arkarsa to help them become strong and tough.  Once they had adapted to their environment, he sent a foe captured during the Divine War; Vorardruak, the Great Wyrm of Hunger, an engine of destruction.  Generations of dwarves warred with him, before Daiuz Hammerstrike crafted a cunning trap, sealing him in the ice deep below the icefields.  The Hunger in the Deep exists in a semi-conscious state, sealed in his frozen prison."
-},
-"dracos":{
-"name":"Dracos",
-"portfolio":"Dragons",
-"alignment":"Chaotic Evil",
-"caste":"Dead God",
-"symbol":"A dragon silhouette",
-"description":"The first of the gods, and father of the Old Gods, Dracos was cast down by them. His dying curse blights the children of the Old Gods with mortality to this day."
+"molidius":{
+"name":"Molidius",
+"language":"Various",
+"description":"The world in which this game is set. Molidius has four major continents; Thelian, Ghalak, Erathal-Shar, and Arkarsa. It is circled by two moons, Elmore and Folio."
 }
 }
