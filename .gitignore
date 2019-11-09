@@ -1,2 +1,3 @@
 # ignore the thing that makes Discord trash the token
 /auth.json
+auth.json
