@@ -4,6 +4,7 @@ var auth = require('./auth.json');
 var timeInfo = require('./time.json');
 var deities = require('./deities.json');
 var geography = require('./geography.json');
+var historical = require('./history.json');	// because 'history' is a reserved word
 var poopString = "Heh heh. You said 'poop.'";
 var doomString = "DOOMED!";
 var oddsString = "Never tell me the odds!";
@@ -12,13 +13,16 @@ var helpInfo = "Hi, I'm LoreBot! I can provide information on the following thin
 			   "\n![DEITY NAME] - Specific deity information." +
 			   "\n!Geography - List of geographic locations." +
 			   "\n![GEOGRAPHIC LOCATION] - Specific geographic information." +
+			   "\n!History - List of historical topics." +
+			   "\n![HISTORICAL TOPIC] - Specific historical information." +
 			   "\n!Lunar [SEASON] [DAY] [YEAR] - Lunar phases for that day." +
 			   "\n!Hakim - Description of Hakim and Hakim's New and Previously Owned Magical Items." +
 			   "\n!Hakim Prices - Prices for Hakim's." +
 			   "\n!Time - Calendar and timekeeping." + 
 			   "\n!Standards - The foundation of currency." + 
 			   "\n!Tavern - Randomly generated tavern name." + 
-			   "\n!Interlude - Randomly selected interlude.";
+			   "\n!Interlude - Randomly selected interlude." + 
+			   "\n!Stat Block - Roll a stat block (4d6 drop the lowest 8 times).";
 var adjList = ["Stout", "Bloody", "Slow", "Dull", "Soaked", "Drunken", "Crooked", "Dark", "Fabulous", "Noble", "Soft", "Red", 
 			   "Green", "White", "Black", "Yellow", "Blue", "Burning", "Shattered", "Mighty", "Strong", "Lonely", "Poor", "Old", 
 			   "Generous", "Lanky", "Hapless", "Tall", "Remarkable", "Frugal", "Prudent", "Foul", "Evil", "Good", "Rotten", "Shining", 
@@ -67,6 +71,13 @@ var standardsString = "  Commissioned by the ancient dwarven king Thakrond Flint
 					  "allows merchants to confidently accept coins and gems as currency. Nearly any merchant had to transcribe their own " +
 					  "copy in their apprenticeship, and copies can be widely purchased for 1 GP. Any player character with a mercantile " +
 					  "background may have a copy of Standards, a balance, and weights in addition to their normal starting gear.";
+var diceRegEx = /\d+d\d+|^advantage|^disadvantage/i;
+var intRegEx = /\d+/;
+var opRegEx = /[+-/*x]/;
+var shouldCalcRegEx = /^[+-\d]|^d\d|^advantage|^disadvantage/;
+var shouldInsertOne = /^d\d/;
+var numberRegEx = /\d+/;
+
 // Configure logger settings
 logger.remove(logger.transports.Console);
 logger.add(new logger.transports.Console, {
@@ -106,6 +117,10 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		else if(cmd === "geography") {
 			msg = "```Geography Topics:\n" + geography[cmd] + "```";
 		}
+		// list of historical topics
+		else if(cmd === "history") {
+			msg = "```Historical Topics:\n" + historical[cmd] + "```";
+		}
 		// Standard Weights and Measurements of Precious Stones and Metals
 		else if(cmd === "standards") {
 			msg = "```" + standardsString + "```";
@@ -136,9 +151,22 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		}
 		// test function
 		else if(cmd === "test") {
-			msg = "Should you really be messing with things you don't understand, " + user + "?";
+			if(user === "wire_hall_medic") {
+				msg = "Working properly.";
+			}
+			else {
+				msg = "Should you really be messing with things you don't understand, " + user + "?";
+			}
 		}
-		// specific geographic locations
+		// roll stat block
+		else if(cmd === "stat block") {
+			msg = "```" + genStatBlock() + "```";
+		}
+		// dice interpertere and calculator
+		else if(shouldCalcRegEx.test(cmd)) {
+			msg = "```" + calculate(cmd) + "```";
+		}
+		// specific geographic and historical topics
 		else {
 			var cmd2 = cmd;
 			if(cmd2.startsWith("the ")) {
@@ -146,6 +174,9 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			}
 			if(cmd2 in geography != 0) {
 				msg = formatGeography(geography[cmd2]);
+			}
+			if(cmd2 in historical != 0) {
+				msg = historical[cmd2];
 			}
 		}
      }
@@ -161,6 +192,13 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		}
 		else if(cmd.includes("chances of") || cmd.includes("odds of")) {
 			msg = "Never tell me the odds!";
+		}
+		else if(cmd === "what does lorebot think?") {
+			if(user === "wire_hall_medic") {
+				msg = "Michael is 100% correct.";
+			} else {
+				msg = getGoForItMsg();
+			}
 		}
 	 }
 		
@@ -229,10 +267,56 @@ function roll(max) {
 	return parseInt(max * Math.random());
 };
 
+function roll1d6() {
+	return roll(6) + 1;
+}
+
+function roll4d6() {
+	return [roll1d6(), roll1d6(), roll1d6(), roll1d6()];
+}
+
+function genStat() {
+	var returnVal = [0, 0, 0, 0, 0];
+	var statRoll = roll4d6();
+	var i;
+	for (i = 0; i < 4; i++) {
+		returnVal[i] = statRoll[i];
+	} 
+	statRoll.sort();
+	for (i = 1; i < 4; i++) {
+		returnVal[4] += statRoll[i];
+	}
+	return returnVal;
+}
+
+function getStatString(statArr) {
+	var outStr = statArr[4] + " ";
+	if(statArr[4] < 10) {
+		outStr += " ";
+	}
+	outStr += "[" + statArr[0] + ", " + statArr[1] + ", " + statArr[2] + ", " + statArr[3] + "]";
+	return outStr;
+}
+
 function randomElement(list) {
 	return list[roll(list.length)];
 	
 };
+
+function genStatBlock() {
+	var finalStats = [0, 0, 0, 0, 0, 0, 0, 0];
+	var outStr = "";
+	var i;
+	for (i = 0; i < 8; i++) {
+		var curRoll = genStat();
+		outStr += getStatString(curRoll) + "\n";
+		finalStats[i] = curRoll[4];
+	}
+	finalStats.sort(function(a, b){return a-b});
+	outStr = finalStats[2] + ", " + finalStats[3] + ", " + finalStats[4] + ", " + 
+			 finalStats[5] + ", " + finalStats[6] + ", " + finalStats[7] + "\n" + outStr;
+	return outStr;
+}
 
 function getTavernName() {
 	var msg = "";
@@ -262,3 +346,178 @@ function getTavernName() {
 	msg += "```";
 	return msg;
 };
+
+function calculate(inStr) {
+	if(shouldInsertOne.test(inStr)) {
+		inStr = "1" + inStr;
+	}
+	var parsedArr = parseDiceExpression(inStr);
+	var rolledArr = null;
+	var msg = "";
+	
+	if(parsedArr == null) {
+		return "Could not parse '" + inStr + "'";
+	}
+	rolledArr = resolveRolls(parsedArr);
+	if(rolledArr == null) {
+		return "Could not parse '" + inStr + "'";
+	}
+	msg = "Total = " + sumExpr(rolledArr) + "\n";
+	
+	var i;
+	for(i = 0; i < parsedArr.length; i++) {
+		msg += parsedArr[i] + " ";
+	}
+	
+	// only show third line if needed dice
+	if(diceRegEx.test(inStr)) {
+		msg += "=> ";
+		for(i = 0; i < rolledArr.length; i++) {
+			msg += rolledArr[i] + " ";
+		}
+	}
+	
+	return msg;
+}
+
+function parseDiceExpression(inStr) {
+	// remove whitespace
+	var calcStr = inStr.replace(/\s/g, "");
+	var valArr = [];
+	var i;
+	var startIndex = 0;
+	// break into array
+	for(i = 0; i < calcStr.length + 1; i++) {
+		if(i == calcStr.length) {
+			valArr.push(calcStr.substring(startIndex, i));
+		}
+		else if(hasOpVal(calcStr.substring(i, i + 1))) {
+			if (i == 0) {
+				valArr.push("0");
+			} else {
+				valArr.push(calcStr.substring(startIndex, i));
+			}
+			valArr.push(calcStr.substring(i, i + 1));
+			startIndex = i + 1;
+		}
+	}
+	// check validity
+	if(hasDiceVal(valArr[valArr.length - 1]) == false) {
+		return null;
+	}
+	if(hasDiceVal(valArr[0]) == false) {
+		return null;
+	}
+	var expectingOp = false;
+	for(i = 0; i < valArr.length; i++) {
+		if(expectingOp) {
+			if(hasOpVal(valArr[i]) == false)
+				return null;
+		} else {
+			if(hasDiceVal(valArr[i]) == false)
+				return null;
+		}
+		expectingOp = !expectingOp;
+	}
+	return valArr;
+}
+
+function resolveRolls(parsedExp) {
+	var returnVal = [];
+	var i = 0;
+	for(i = 0; i < parsedExp.length; i++) {
+		if(diceRegEx.test(parsedExp[i]) == true) {
+			returnVal.push(resolveDiceExpression(parsedExp[i]));
+		} else {
+			returnVal.push(parsedExp[i]);
+		}
+		if(returnVal[i] == null) {
+			return null;
+		}
+	}
+	return returnVal;
+}
+
+function resolveDiceExpression(expStr) {
+	if(expStr === "advantage") {
+		return rollAdv();
+	}
+	if(expStr === "disadvantage") {
+		return rollDis();
+	}
+	var i;
+	var sum = 0;
+	var x = parseInt(expStr.split('d')[0]);
+	if(x > 1000) {
+		return null;
+	}
+	var y = parseInt(expStr.split('d')[1]);
+	for(i = 0; i < x; i++) {
+		sum += roll(y) + 1;
+	}
+	return sum;
+}
+
+function sumExpr(superExpr) {
+	// create copy to avoid overwriting expr
+	var expr = [];
+	var i = 0;
+	for(i = 0; i < superExpr.length; i++) {
+		expr.push(superExpr[i]);
+	}
+	// first replace advantage and disadvantage
+	for(i = 0; i < expr.length; i++) {
+		if(typeof expr[i] == typeof " ") {
+			if(expr[i].includes("min")) {
+				var a = parseInt(numberRegEx.exec(expr[i].split(",")[0]));
+				var b = parseInt(numberRegEx.exec(expr[i].split(",")[1]));
+				expr[i] = Math.min(a, b);
+			}
+			else if(expr[i].includes("max")) {
+				var a = parseInt(numberRegEx.exec(expr[i].split(",")[0]));
+				var b = parseInt(numberRegEx.exec(expr[i].split(",")[1]));
+				expr[i] = Math.max(a, b);
+			}
+		}
+	}
+	var sum = parseInt(expr[0]);
+	for(i = 1; i < expr.length; i += 2) {
+		if(expr[i] == "+") {
+			sum += parseInt(expr[i + 1]);
+		}
+		if(expr[i] == "-") {
+			sum -= parseInt(expr[i + 1]);
+		}
+		if(expr[i] == "*" || expr[i] == "x") {
+			sum *= parseInt(expr[i + 1]);
+		}
+		if(expr[i] == "/") {
+			sum /= parseInt(expr[i + 1]);
+		}
+	}
+	return sum;
+}
+
+function rollAdv() {
+	var rollA = roll(20) + 1;
+	var rollB = roll(20) + 1;
+	return "max(" + rollA + "," + rollB + ")";
+}
+
+function rollDis() {
+	var rollA = roll(20) + 1;
+	var rollB = roll(20) + 1;
+	return "min(" + rollA + "," + rollB + ")";
+}
+
+function hasDiceVal(str) {
+	return diceRegEx.test(str) || intRegEx.test(str);
+}
+
+function hasOpVal(str) {
+	return opRegEx.test(str);
+}
+
+function getGoForItMsg() {
+	return "You should go for it! The chance of a TPK is only {}%!".format(roll(99) + 1);
+}
