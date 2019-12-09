@@ -519,5 +519,5 @@ function hasOpVal(str) {
 }
 
 function getGoForItMsg() {
-	return "You should go for it! The chance of a TPK is only {}%!".format(roll(99) + 1);
+	return "You should go for it! The chance of a TPK is only " + (roll(99) + 1) + "%!";
 }
