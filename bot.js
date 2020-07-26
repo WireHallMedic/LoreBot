@@ -96,7 +96,6 @@ var bot = new Discord.Client({
 function autoReconnect()
 {
    bot = new Discord.Client({token: auth.token, autorun: true});
-   logger.info('auto reconnect');
    setTimeout(autoReconnect, fifteenMinutes);
 }
 
