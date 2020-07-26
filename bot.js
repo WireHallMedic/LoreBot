@@ -89,6 +89,17 @@ var bot = new Discord.Client({
    token: auth.token,
    autorun: true
 });
+
+function autoReconnect()
+{
+   bot = new Discord.Client({token: auth.token, autorun: true});
+   logger.info('auto reconnect');
+   setTimeout(autoReconnect, thirtyMinutes);
+}
+
+// call autoReconnect in a half hour
+setTimeout(autoReconnect, thirtyMinutes);
+
 bot.on('ready', function (evt) {
     logger.info('Connected');
     logger.info('Logged in as: ');
