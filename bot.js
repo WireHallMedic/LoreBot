@@ -78,6 +78,8 @@ var shouldCalcRegEx = /^[+-\d]|^d\d|^advantage|^disadvantage/;
 var shouldInsertOne = /^d\d/;
 var numberRegEx = /\d+/;
 
+var fifteenMinutes = 15 * 60 * 1000;
+
 // Configure logger settings
 logger.remove(logger.transports.Console);
 logger.add(new logger.transports.Console, {
@@ -90,15 +92,16 @@ var bot = new Discord.Client({
    autorun: true
 });
 
+// prevent the stupid, stupid heartbead timeout
 function autoReconnect()
 {
    bot = new Discord.Client({token: auth.token, autorun: true});
    logger.info('auto reconnect');
-   setTimeout(autoReconnect, thirtyMinutes);
+   setTimeout(autoReconnect, fifteenMinutes);
 }
 
-// call autoReconnect in a half hour
-setTimeout(autoReconnect, thirtyMinutes);
+// call autoReconnect in a fifteen minutes
+setTimeout(autoReconnect, fifteenMinutes);
 
 bot.on('ready', function (evt) {
     logger.info('Connected');
