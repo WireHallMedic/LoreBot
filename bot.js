@@ -87,26 +87,38 @@ logger.add(new logger.transports.Console, {
 });
 logger.level = 'debug';
 // Initialize Discord Bot
+
 var bot = new Discord.Client({
    token: auth.token,
    autorun: true
 });
 
+function connect()
+{
+   bot = new Discord.Client({token: auth.token, autorun: true});
+   logger.info('Reconnected');
+}
+
+/*
 // prevent the stupid, stupid heartbead timeout
 function autoReconnect()
 {
    bot = new Discord.Client({token: auth.token, autorun: true});
-   setTimeout(autoReconnect, fifteenMinutes);
 }
 
-// call autoReconnect in a fifteen minutes
-setTimeout(autoReconnect, fifteenMinutes);
+// call reconnect every fifteen minutes
+setInterval(autoReconnect, fifteenMinutes);
+*/
+// create websocket (technically you should perform a GET to /api/gateway and use the response)
 
 bot.on('ready', function (evt) {
     logger.info('Connected');
     logger.info('Logged in as: ');
     logger.info(bot.username + ' - (' + bot.id + ')');
 });
+
+bot.on('disconnect', connect);
+
 bot.on('message', function (user, userID, channelID, message, evt) {
     // Our bot needs to know if it will execute a command
     // It will listen for messages that will start with `!`
